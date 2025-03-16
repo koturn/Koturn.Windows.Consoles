@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0-windows;net8.0-windows;net9.0-windows</TargetFrameworks>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <WarningLevel>8</WarningLevel>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <LangVersion>13</LangVersion>
+    <Title>Koturn.Windows.Consoles</Title>
+    <Company>koturn</Company>
+    <Authors>koturn</Authors>
+    <Copyright>Copyright (C) 2025 koturn All Rights Reserverd.</Copyright>
+    <Description>Library for natively manipulating console windows.</Description>
+    <PackageProjectUrl>https://github.com/koturn/Koturn.Windows.Consoles</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/koturn/Koturn.Windows.Consoles</RepositoryUrl>
+    <PackageTags>Windows;Console</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

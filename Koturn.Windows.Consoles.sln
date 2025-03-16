@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koturn.Windows.Consoles", "Koturn.Windows.Consoles\Koturn.Windows.Consoles.csproj", "{D1840169-F8C8-401C-A3B7-BB090493CAC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1840169-F8C8-401C-A3B7-BB090493CAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1840169-F8C8-401C-A3B7-BB090493CAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1840169-F8C8-401C-A3B7-BB090493CAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1840169-F8C8-401C-A3B7-BB090493CAC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19B1C03D-3F48-40C8-84B5-2679F2E09859}
+	EndGlobalSection
+EndGlobal
