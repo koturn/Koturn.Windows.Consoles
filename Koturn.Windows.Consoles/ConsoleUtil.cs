@@ -250,11 +250,11 @@ namespace Koturn.Windows.Consoles
             /// For more information, see <see href="https://learn.microsoft.com/en-us/windows/win32/winprog/using-the-windows-headers">Using the Windows Headers</see>.</para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("kernel32.dll", EntryPoint = "AttachConsole", SetLastError = true)]
+            [LibraryImport("kernel32.dll", EntryPoint = nameof(AttachConsole), SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static partial bool AttachConsole(uint processId);
 #else
-            [DllImport("kernel32.dll", EntryPoint = "AttachConsole", ExactSpelling = true, SetLastError = true)]
+            [DllImport("kernel32.dll", EntryPoint = nameof(AttachConsole), ExactSpelling = true, SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool AttachConsole(uint processId);
 #endif  // NET7_0_OR_GREATER
@@ -263,8 +263,8 @@ namespace Koturn.Windows.Consoles
             /// Allocates a new console for the calling process.
             /// </summary>
             /// <returns>
-            /// <para>If the function succeeds, the return value is nonzero.</para>
-            /// <para>If the function fails, the return value is zero. To get extended error information, call GetLastError.</para>
+            /// <para>If the function succeeds, the return value is true.</para>
+            /// <para>If the function fails, the return value is false. To get extended error information, call <see cref="Marshal.GetLastWin32Error"/>.</para>
             /// </returns>
             /// <remarks>
             /// <para><seealso href="https://learn.microsoft.com/en-us/windows/console/allocconsole"/></para>
@@ -289,11 +289,11 @@ namespace Koturn.Windows.Consoles
             /// </para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("kernel32.dll", EntryPoint = "AllocConsole", SetLastError = true)]
+            [LibraryImport("kernel32.dll", EntryPoint = nameof(AllocConsole), SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static partial bool AllocConsole();
 #else
-            [DllImport("kernel32.dll", EntryPoint = "AllocConsole", ExactSpelling = true, SetLastError = true)]
+            [DllImport("kernel32.dll", EntryPoint = nameof(AllocConsole), ExactSpelling = true, SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool AllocConsole();
 #endif  // NET7_0_OR_GREATER
@@ -302,8 +302,8 @@ namespace Koturn.Windows.Consoles
             /// Detaches the calling process from its console.
             /// </summary>
             /// <returns>
-            /// <para>If the function succeeds, the return value is nonzero.</para>
-            /// <para>If the function fails, the return value is zero. To get extended error information, call GetLastError.</para>
+            /// <para>If the function succeeds, the return value is true.</para>
+            /// <para>If the function fails, the return value is false. To get extended error information, call <see cref="Marshal.GetLastWin32Error"/>.</para>
             /// </returns>
             /// <remarks>
             /// <para><seealso href="https://learn.microsoft.com/en-us/windows/console/freeconsole"/></para>
@@ -318,11 +318,11 @@ namespace Koturn.Windows.Consoles
             /// </para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("kernel32.dll", EntryPoint = "FreeConsole", SetLastError = true)]
+            [LibraryImport("kernel32.dll", EntryPoint = nameof(FreeConsole), SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static partial bool FreeConsole();
 #else
-            [DllImport("kernel32.dll", EntryPoint = "FreeConsole", ExactSpelling = true, SetLastError = true)]
+            [DllImport("kernel32.dll", EntryPoint = nameof(FreeConsole), ExactSpelling = true, SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool FreeConsole();
 #endif  // NET7_0_OR_GREATER
@@ -344,10 +344,10 @@ namespace Koturn.Windows.Consoles
             /// </para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("kernel32.dll", EntryPoint = "GetConsoleWindow", SetLastError = true)]
+            [LibraryImport("kernel32.dll", EntryPoint = nameof(GetConsoleWindow), SetLastError = true)]
             public static partial IntPtr GetConsoleWindow();
 #else
-            [DllImport("kernel32.dll", EntryPoint = "GetConsoleWindow", ExactSpelling = true, SetLastError = true)]
+            [DllImport("kernel32.dll", EntryPoint = nameof(GetConsoleWindow), ExactSpelling = true, SetLastError = true)]
             public static extern IntPtr GetConsoleWindow();
 #endif  // NET7_0_OR_GREATER
         }

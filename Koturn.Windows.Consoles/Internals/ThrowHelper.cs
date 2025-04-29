@@ -230,7 +230,7 @@ namespace Koturn.Windows.Consoles.Internals
             /// <remarks>
             /// <seealso href="https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-formatmessage"/>
             /// </remarks>
-            [DllImport("kernel32.dll", EntryPoint = "FormatMessageW", ExactSpelling = true, SetLastError = true)]
+            [DllImport("kernel32.dll", EntryPoint = nameof(FormatMessage) + "W", ExactSpelling = true, SetLastError = true)]
             public static extern unsafe int FormatMessage(FormatMessageFlags flags, IntPtr lpSource, uint dwMessageId, int dwLanguageId, void* lpBuffer, int nSize, IntPtr arguments);
         }
 #endif  // NET7_0_OR_GREATER

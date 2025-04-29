@@ -124,11 +124,11 @@ namespace Koturn.Windows.Consoles.Internals
             /// </para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("user32.dll", EntryPoint = "ShowWindow", SetLastError = true)]
+            [LibraryImport("user32.dll", EntryPoint = nameof(ShowWindow), SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static partial bool ShowWindow(IntPtr hWnd, CmdShow cmdShow);
 #else
-            [DllImport("user32.dll", EntryPoint = "ShowWindow", ExactSpelling = true, SetLastError = true)]
+            [DllImport("user32.dll", EntryPoint = nameof(ShowWindow), ExactSpelling = true, SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool ShowWindow(IntPtr hWnd, CmdShow cmdShow);
 #endif  // NET7_0_OR_GREATER
@@ -157,10 +157,10 @@ namespace Koturn.Windows.Consoles.Internals
             /// The application can perform its own checking or graying by responding to the WM_INITMENU message that is sent before any menu is displayed.</para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("user32.dll", EntryPoint = "GetSystemMenu", SetLastError = true)]
+            [LibraryImport("user32.dll", EntryPoint = nameof(GetSystemMenu), SetLastError = true)]
             public static partial IntPtr GetSystemMenu(IntPtr hWnd, [MarshalAs(UnmanagedType.U1)] bool doRevert);
 #else
-            [DllImport("user32.dll", EntryPoint = "GetSystemMenu", ExactSpelling = true, SetLastError = true)]
+            [DllImport("user32.dll", EntryPoint = nameof(GetSystemMenu), ExactSpelling = true, SetLastError = true)]
             public static extern IntPtr GetSystemMenu(IntPtr hWnd, [MarshalAs(UnmanagedType.U1)] bool doRevert);
 #endif  // NET7_0_OR_GREATER
 
@@ -183,11 +183,11 @@ namespace Koturn.Windows.Consoles.Internals
             /// <para>The application must call the DrawMenuBar function whenever a menu changes, whether the menu is in a displayed window.</para>
             /// </remarks>
 #if NET7_0_OR_GREATER
-            [LibraryImport("user32.dll", EntryPoint = "RemoveMenu", SetLastError = true)]
+            [LibraryImport("user32.dll", EntryPoint = nameof(RemoveMenu), SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static partial bool RemoveMenu(IntPtr hMenu, uint position, MenuFlags flags);
 #else
-            [DllImport("user32.dll", EntryPoint = "RemoveMenu", ExactSpelling = true, SetLastError = true)]
+            [DllImport("user32.dll", EntryPoint = nameof(RemoveMenu), ExactSpelling = true, SetLastError = true)]
             [return: MarshalAs(UnmanagedType.Bool)]
             public static extern bool RemoveMenu(IntPtr hMenu, uint position, MenuFlags flags);
 #endif  // NET7_0_OR_GREATER
